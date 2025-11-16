@@ -155,39 +155,3 @@ Keep responses warm, professional, and reassuring. Ask one question at a time. S
 }
 
 export default App;
-```
-
----
-
-### 🔐 Step 3: Add Your API Key to Netlify (NOT in code!)
-
-**Important:** Your API key should NEVER be in your code. Instead:
-
-1. **Go to your Netlify dashboard**
-2. **Select your site**
-3. **Go to:** Site configuration → Environment variables
-4. **Click:** Add a variable
-5. **Add:**
-   - **Key:** `ANTHROPIC_API_KEY`
-   - **Value:** `your-actual-api-key-here`
-   - **Scopes:** Check "Same value for all deploy contexts"
-6. **Save**
-
----
-
-### 📦 Step 4: Your Final Project Structure
-
-Your project should now look like this:
-```
-hair-consultation-chatbot/
-├── netlify/
-│   └── functions/
-│       └── hair-consultation.js   ← NEW (backend function)
-├── src/
-│   ├── App.jsx                     ← UPDATED (calls backend)
-│   ├── main.jsx                    ← (no changes)
-│   └── index.css                   ← (no changes)
-├── index.html
-├── package.json
-├── vite.config.js
-└── .gitignore
